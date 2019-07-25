@@ -197,7 +197,10 @@
     // test if any minor diagonals on this board contain conflicts
     hasAnyMinorDiagonalConflicts: function() {
       let board = this.get("n");
-      for(let i = boardlength; i < board; i++){
+      let boardOfI = board + 2;
+      // console.log(boardOfI);
+      for(let i = boardOfI; i > 1-board; i--){
+        // console.log(i);
         if(this.hasMinorDiagonalConflictAt(i)){
           return true;
         }
